@@ -1,5 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Colors
+$royal-blue: #5956E9;
+$dark-blue: #232233;
+$gray: #6C6C72;
+$w: #fff;
+$font-josefin-sans: "Josefin Sans", sans-serif;
+$font-work-sans: "Work Sans", sans-serif;
+
+
+
 body {
-    background-color: #ccc;
-    font-size: 20px;
-    color: rgb(226, 179, 179);
+    font-family: $font-josefin-sans;
+
+}
+
+h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/*Header*/
+.hero {
+    background: url(../img/hero-background-image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1024px;
+    padding: 35px 0 0 0;
+
+    &__top {
+        max-width: 1170px;
+        margin: 0 auto 60px;
+
+        &-contacts {
+            display: flex;
+            justify-content: space-between;
+            color: $w;
+            margin-bottom: 15px;
+
+            &--item {
+                display: flex;
+                column-gap: 50px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 18px;
+                }
+            }
+
+            &--item:last-child {
+                column-gap: 30px;
+            }
+        }
+
+        &-nav {
+            background-color: $w;
+            border-radius: 5px;
+            font-size: 1.25em;
+            text-transform: uppercase;
+            padding: 17px 5px 17px 50px;
+            line-height: 1.5;
+            font-weight: 600;
+
+            ul {
+                display: flex;
+                column-gap: 40px
+            }
+        }
+    }
+
+    &__main {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 170px;
+
+        &-description {
+            background-color: $w;
+            max-width: 570px;
+            padding: 40px 30px;
+
+            & h2 {
+                color: $royal-blue;
+                line-height: 1.3;
+                font-weight: 700;
+            }
+
+            & p {
+                color: $gray;
+                line-height: 1.5;
+                margin-bottom: 50px;
+                margin-top: 18px;
+            }
+        }
+
+        &-download p {
+            text-transform: uppercase;
+            color: $dark-blue;
+            font-size: 1.56em;
+            margin-bottom: 5px;
+        }
+
+        &--right img {
+            width: 1800px;
+        }
+
+    }
 }
