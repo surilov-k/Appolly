@@ -10,6 +10,12 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  font-size: 1.953em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 /*Header*/
 .hero {
   background: url(../img/hero-background-image.jpg) no-repeat;
@@ -184,4 +190,61 @@ h2 {
 }
 .hero__main--right img {
   width: 1800px;
+}
+
+/*About*/
+.container-wrap {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+.container-wrap__header {
+  text-align: center;
+}
+
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 148px;
+}
+.about__info > div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.about__info-advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 40px;
+}
+.about__info-advantages--item {
+  border-radius: 10px;
+  padding: 30px 20px 20px 60px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.about__info-advantages--item .checkbox-img {
+  position: absolute;
+  left: 18px;
+}
+.about__info-advantages--item h4 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+.about__info-advantages--item p {
+  line-height: 1.5;
+  color: #6C6C72;
+  font-size: 1em;
 }
