@@ -201,6 +201,11 @@ h3 {
 .container-wrap__header {
   text-align: center;
 }
+.container-wrap__header--subtitle {
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 18px auto 0;
+}
 
 .about__info {
   display: -webkit-box;
@@ -212,6 +217,14 @@ h3 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 148px;
+}
+.about__info-graphiks > img {
+  position: relative;
+  z-index: 2;
+}
+.about__info-graphiks .elips {
+  margin: -65px 0 0 65px;
+  z-index: 1;
 }
 .about__info > div {
   -ms-flex-preferred-size: 50%;
