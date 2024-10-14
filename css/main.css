@@ -422,12 +422,14 @@ h3 {
           transform: translateX(-2px);
 }
 
-.slick-arrow.slick-prev:hover img, .slick-arrow.slick-next:hover img {
+.slick-arrow.slick-prev:hover img,
+.slick-arrow.slick-next:hover img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
 }
 
-.slick-arrow.slick-prev:hover, .slick-arrow.slick-next:hover {
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover {
   background-color: #5956E9;
 }
 
@@ -545,4 +547,76 @@ h3 {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   margin-top: -10px;
+}
+
+/*Download*/
+.download .container-wrap {
+  padding-top: 0;
+}
+.download__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.download__info > div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.download__info-about > p {
+  color: #6C6C72;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  margin-top: 18px;
+}
+.download__info-about-statistics {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  text-align: center;
+  margin-top: 60px;
+}
+.download__info-about-statistics .stat-item {
+  background-color: #5956E9;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 18px;
+  width: 176px;
+  padding: 20px 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.download__info-about-statistics .stat-item .stat-count {
+  font-size: 1.56em;
+}
+.download__info-about-statistics .stat-item .stat-descr {
+  font-size: 1.25em;
+}
+.download__info-about--dwnl-wrap img {
+  width: 150px;
+  height: 45px;
+}
+.download__info-graphiks {
+  padding-left: 80px;
+}
+.download__info-graphiks img {
+  position: relative;
+  z-index: 2;
+}
+.download__info-graphiks .elips {
+  -webkit-transform: translate(100px, -57px);
+          transform: translate(100px, -57px);
+  z-index: 1;
 }

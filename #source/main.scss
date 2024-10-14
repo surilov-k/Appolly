@@ -390,6 +390,7 @@ h3 {
     height: 50px;
     cursor: pointer;
 }
+
 .slick-arrow img {
     transition: all 0.2s ease;
 }
@@ -402,17 +403,22 @@ h3 {
     border: 1px solid $royal-blue;
     transition: all 0.2s ease;
 }
+
 .slick-arrow.slick-prev img {
     transform: translateX(-2px);
 }
+
 .slick-arrow.slick-next img {
     transform: translateX(-2px);
 }
-.slick-arrow.slick-prev:hover img,.slick-arrow.slick-next:hover img {
+
+.slick-arrow.slick-prev:hover img,
+.slick-arrow.slick-next:hover img {
     filter: brightness(0) invert(1);
 }
 
-.slick-arrow.slick-prev:hover,.slick-arrow.slick-next:hover {
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover {
     background-color: $royal-blue;
 }
 
@@ -517,4 +523,73 @@ h3 {
     transform: scale(1.1);
     transition: all 0.5s ease;
     margin-top: -10px;
+}
+
+/*Download*/
+.download {
+    .container-wrap {
+        padding-top: 0;
+    }
+
+    &__info {
+        display: flex;
+
+        &>div {
+            flex-basis: 50%;
+        }
+
+        &-about {
+            &>p {
+                color: $gray;
+                line-height: 1.5;
+                margin-bottom: 50px;
+                margin-top: 18px;
+            }
+
+            &-statistics {
+                color: $w;
+                display: flex;
+                column-gap: 30px;
+                text-align: center;
+                margin-top: 60px;
+
+                & .stat-item {
+                    background-color: $royal-blue;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 18px;
+                    width: 176px;
+                    padding: 20px 10px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+
+                    & .stat-count {
+                        font-size: 1.56em;
+                    }
+
+                    & .stat-descr {
+                        font-size: 1.25em;
+                    }
+                }
+            }
+
+            &--dwnl-wrap img {
+                width: 150px;
+                height: 45px;
+            }
+        }
+        &-graphiks {
+            padding-left: 80px;
+            & img {
+                position: relative;
+                z-index: 2;
+            }
+            & .elips {
+                transform: translate(100px, -57px);
+                z-index: 1;
+            }
+        }
+    }
 }
