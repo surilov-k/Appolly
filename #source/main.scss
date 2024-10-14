@@ -758,11 +758,69 @@ h3 {
 }
 
 .customers-slider .slick-dots {
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 18px;
+    font-size: 0;
+    margin-top: 40px;
+}
+
+.customers-slider .slick-dots li {
+    list-style: none;
+}
+
+.customers-slider .slick-dots li {
+    width: 16px;
+    height: 16px;
+    background-color: $w;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        border: 1px solid $w;
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+    }
+}
+
+.customers-slider .slick-dots li:hover::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid $w;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.customers-slider .slick-dots li.slick-active {
+    &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid $w;
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .customers-slider .slick-track {
@@ -798,25 +856,45 @@ h3 {
 
 .customers-slider .slick-snext {
     opacity: 1;
-    transform: translate3d(33%, 0, -10px);
+    transform: translate3d(33%, 0, -8px);
     z-index: 1;
 }
 
 .customers-slider .slick-sprev {
     opacity: 1;
-    transform: translate3d(-33%, 0, -10px);
+    transform: translate3d(-33%, 0, -8px);
 }
 
 .customer-slider-item {
     background-color: $w;
-    color: $gray;
     height: 360px;
     padding: 40px 60px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 
+    &__avatar {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        color: $dark-blue;
+        font-weight: 700;
+    }
+
+    &__position {
+        color: $dark-blue;
+        font-weight: 600;
+        font-size: 1.25em;
+        display: block;
+        text-transform: uppercase;
+        margin: 14px 0;
+    }
+
     & p {
         color: $gray;
+        line-height: 1.5;
     }
 }

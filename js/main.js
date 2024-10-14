@@ -97,15 +97,12 @@ $(document).ready(function () {
         focusOnSelect: true,
         infinite: true,
         centerMode: true,
-        slidesPerRow: 1,
         slidesToShow: 1,
-        slidesToScroll: 1,
         centerPadding: '0',
         swipe: true,
         customPaging: function (slider, i) {
             return '';
         },
-        /*infinite: false,*/
     });
 
 
