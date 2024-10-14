@@ -92,11 +92,9 @@ $(document).ready(function () {
 
     rev.slick({
         speed: 1000,
-        arrows: true,
-        dots: false,
+        arrows: false,
+        dots: true,
         focusOnSelect: true,
-        prevArrow: '<button> prev</button>',
-        nextArrow: '<button> next</button>',
         infinite: true,
         centerMode: true,
         slidesPerRow: 1,
