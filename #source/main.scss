@@ -898,3 +898,44 @@ h3 {
         line-height: 1.5;
     }
 }
+
+/*Recent blog*/
+.recent {
+    &__posts {
+        display: flex;
+        column-gap: 30px;
+
+        &-item {
+            flex-basis: 33.3%;
+            padding-bottom: 35px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+            &--head {
+                font-weight: 600;
+                font-size: 1.25em;
+                margin: 40px 0 10px;
+                text-transform: uppercase;
+                padding: 0 18px;
+                line-height: 1.5;
+            }
+
+            &--desc {
+                color: $gray;
+                line-height: 1.5;
+                margin-bottom: 30px;
+                padding: 0 18px;
+            }
+
+            &--read-more {
+                font-weight: 600;
+                font-size: 1.25em;
+                text-transform: uppercase;
+                text-decoration: underline;
+                color: $royal-blue;
+                padding: 0 18px;
+            }
+        }
+    }
+}
