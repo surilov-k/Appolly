@@ -901,6 +901,10 @@ h3 {
 
 /*Recent blog*/
 .recent {
+    & .container-wrap {
+        padding: 120px 0 235px;
+    }
+
     &__posts {
         display: flex;
         column-gap: 30px;
@@ -936,6 +940,161 @@ h3 {
                 color: $royal-blue;
                 padding: 0 18px;
             }
+        }
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: $dark-blue;
+
+    & .container-wrap {
+        padding-top: 0;
+        padding-bottom: 18px;
+    }
+
+    &__contacts {
+        color: $dark-blue;
+        background-color: $w;
+        width: 100%;
+        border-radius: 30px;
+        padding: 65px 50px;
+        display: flex;
+        transform: translateY(-115px);
+        box-shadow: 0 10px 100px 0 rgba(0, 0, 0, 0.24);
+
+        &-item {
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+            column-gap: 18px;
+            font-size: 1.56em;
+            font-weight: 600;
+            position: relative;
+            padding-right: 9.5%;
+
+            &--icon-wraper {
+                background-color: $royal-blue;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                & img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 40px;
+                    width: 40px;
+                }
+            }
+        }
+
+        &-item:last-child {
+            margin-left: 100px;
+
+            &:before {
+                content: '';
+                height: 120%;
+                width: 4px;
+                background-color: $gray;
+                position: absolute;
+                top: -10px;
+                left: -9.5%;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        column-gap: 60px;
+        padding-bottom: 60px;
+
+        &-item {
+            flex-basis: 33.3%;
+            line-height: 1.5;
+
+            & .footer-logo {
+                filter: brightness(0) invert(1);
+                width: 180px;
+                margin-bottom: 20px;
+            }
+
+            &--head {
+                margin-bottom: 11px;
+            }
+
+            &--social {
+                margin-top: 30px;
+                display: flex;
+                column-gap: 40px;
+                justify-content: space-between;
+                align-items: center;
+                overflow: hidden;
+                width: 80%;
+
+                & a {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        width: 1px;
+                        height: 24px;
+                        background-color: $gray;
+                        position: absolute;
+                        right: -150%;
+                    }
+                }
+
+                & img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &--nav li {
+                margin-bottom: 12px;
+            }
+
+            & .footer-subscribe {
+                margin-top: 30px;
+                position: relative;
+
+                &__input {
+                    color: $gray;
+                    background-color: $w;
+                    border-radius: 4px;
+                    padding: 13px 55px 13px 18px;
+                    width: 100%;
+                }
+
+                &__btn {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 2px;
+                    right: 2px;
+                    background-color: $royal-blue;
+                    border-radius: 4px;
+                    padding: 10px 10px 4px 14px;
+                }
+            }
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        border-top: 1px solid $w;
+        padding-top: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+
+        & .c-symbol {
+            font-size: 2em;
+            font-weight: 300;
+            margin-bottom: -4px;
         }
     }
 }
