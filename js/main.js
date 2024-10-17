@@ -36,8 +36,12 @@ $(document).ready(function () {
         dots: true,
         arrows: true,
         speed: 500,
-        prevArrow: '<button class="slick-prev slick-arrow"><img src="./img/slider/arrow-left-s-line.svg" alt="arrow-left"></button>',
-        nextArrow: '<button class="slick-next slick-arrow"><img src="./img/slider/arrow-left-s-line.svg" alt="arrow-left"></button>',
+        prevArrow: `<button class="slick-prev slick-arrow"><svg class="icon slider-icon">
+            <use xlink:href="#sprt-arrow-left-b"></use>
+                    </svg></button>`,
+        nextArrow: `<button class="slick-next slick-arrow"><svg class="icon slider-icon">
+            <use xlink:href="#sprt-arrow-left-b"></use>
+                    </svg></button>`,
         responsive: [
             {
                 breakpoint: 768,
@@ -108,4 +112,14 @@ $(document).ready(function () {
 
 });
 
-// documentQuery соседние елементы
+
+let ajax = new XMLHttpRequest();
+ajax.open("GET", "../img/icons/sprite.svg", true);
+ajax.send();
+ajax.onload = function () {
+    let div = document.createElement("div");
+    div.innerHTML = ajax.responseText;
+    document.body.insertBefore(div,
+        document.body.childNodes[0]
+    );
+};

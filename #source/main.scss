@@ -28,6 +28,12 @@ h3 {
     font-weight: 400;
 }
 
+.icon {
+    fill: $w;
+    width: 18px;
+    height: 18px;
+}
+
 .white-section {
     color: $w;
 
@@ -67,6 +73,20 @@ h3 {
 
             &--item:last-child {
                 column-gap: 30px;
+            }
+
+            & .hero-social {
+                & .icon {
+                    outline: 1px solid transparent;
+                    outline-offset: 3px;
+                    border-radius: 50%;
+                    transition: all .2s ease-in-out;
+                }
+
+                & a:hover .icon {
+                    outline: 1px solid $w;
+                    outline-offset: 3px;
+                }
             }
         }
 
@@ -254,9 +274,13 @@ h3 {
                 box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
                 position: relative;
 
-                .checkbox-img {
+                .checkbox-icon {
                     position: absolute;
+                    top: 25px;
                     left: 18px;
+                    width: 24px;
+                    height: 24px;
+                    fill: $royal-blue;
                 }
 
                 & h4 {
@@ -333,6 +357,11 @@ h3 {
             ". support .";
 
         &-item {
+            & .features-icon {
+                width: 50px;
+                height: 50px;
+            }
+
             & h4 {
                 font-size: 1.25em;
                 text-transform: uppercase;
@@ -377,7 +406,6 @@ h3 {
 
 }
 
-
 .checkout-slider .slick-list {
     overflow: hidden;
     transform-style: preserve-3d;
@@ -392,10 +420,13 @@ h3 {
     width: 50px;
     height: 50px;
     cursor: pointer;
-}
 
-.checkout-slider .slick-arrow img {
-    transition: all 0.2s ease;
+    & .slider-icon {
+        fill: $royal-blue;
+        width: 48px;
+        height: 48px;
+        transition: all 0.3s ease-in-out;
+    }
 }
 
 .checkout-slider .slick-arrow.slick-prev {
@@ -404,20 +435,17 @@ h3 {
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid $royal-blue;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease-in-out;
 }
 
-.checkout-slider .slick-arrow.slick-prev img {
+.checkout-slider .slick-arrow.slick-prev .slider-icon,
+.checkout-slider .slick-arrow.slick-next .slider-icon {
     transform: translateX(-2px);
 }
 
-.checkout-slider .slick-arrow.slick-next img {
-    transform: translateX(-2px);
-}
-
-.checkout-slider .slick-arrow.slick-prev:hover img,
-.checkout-slider .slick-arrow.slick-next:hover img {
-    filter: brightness(0) invert(1);
+.checkout-slider .slick-arrow.slick-prev:hover .slider-icon,
+.checkout-slider .slick-arrow.slick-next:hover .slider-icon {
+    fill: $w;
 }
 
 .checkout-slider .slick-arrow.slick-prev:hover,
@@ -432,12 +460,11 @@ h3 {
     border-radius: 50%;
     border: 1px solid $royal-blue;
     transform: rotate(180deg);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .checkout-slider .slick-slide {
     position: relative;
-    //height: 590px;
     text-align: center;
     padding: 30px 0;
     transition: .3s;
@@ -474,50 +501,26 @@ h3 {
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    transition: all 0.2s ease;
+    opacity: 1;
+    outline: 1px solid transparent;
+    outline-offset: 2px;
+    transition-property: opacity, outline-color;
+    transition-duration: .3s, .2s;
+    transition-timing-function: ease-in-out;
 
     &:hover {
         opacity: 0.9;
     }
-
-    &::before {
-        content: '';
-        width: 16px;
-        height: 16px;
-        border: 1px solid $royal-blue;
-        position: absolute;
-        border-radius: 50%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        transition: all 0.3s ease;
-    }
 }
 
-.checkout-slider .slick-dots li:hover button::before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: 1px solid $royal-blue;
-    position: absolute;
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.checkout-slider .slick-dots li:hover button {
+    outline: 1px solid $royal-blue;
+    outline-offset: 2px;
 }
 
 .checkout-slider .slick-dots li.slick-active button {
-    &:before {
-        content: '';
-        width: 20px;
-        height: 20px;
-        border: 1px solid $royal-blue;
-        position: absolute;
-        border-radius: 50%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
+    outline: 1px solid $royal-blue;
+    outline-offset: 2px;
 }
 
 .checkout-slider .slick-center img {
@@ -553,6 +556,11 @@ h3 {
                 column-gap: 30px;
                 text-align: center;
                 margin-top: 60px;
+
+                & .icon {
+                    width: 35px;
+                    height: 35px;
+                }
 
                 & .stat-item {
                     background-color: $royal-blue;
@@ -660,11 +668,6 @@ h3 {
             box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             padding: 40px 20px 52px;
-            transition: all 0.3s ease;
-
-            &:hover {
-                transform: scale(1.03);
-            }
 
             & .team-avatar-wrap {
                 position: relative;
@@ -731,13 +734,19 @@ h3 {
                         position: absolute;
                         right: -150%;
                     }
+
+                    &:hover .icon {
+                        fill: $royal-blue;
+                    }
+
+                    & .icon {
+                        width: 24px;
+                        height: 24px;
+                        fill: $dark-blue;
+                        transition: fill .3s ease-in-out;
+                    }
                 }
 
-                & img {
-                    filter: invert(1);
-                    width: 24px;
-                    height: 24px;
-                }
             }
         }
     }
@@ -777,50 +786,20 @@ h3 {
     border-radius: 50%;
     cursor: pointer;
     position: relative;
+    outline: 1px solid transparent;
+    outline-offset: 2px;
     transition: all 0.2s ease;
 
-    &:hover {
-        opacity: 0.9;
-    }
-
-    &::before {
-        content: '';
-        width: 16px;
-        height: 16px;
-        border: 1px solid $w;
-        position: absolute;
-        border-radius: 50%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        transition: all 0.3s ease;
-    }
 }
 
-.customers-slider .slick-dots li:hover::before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: 1px solid $w;
-    position: absolute;
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.customers-slider .slick-dots li:hover {
+    outline: 1px solid $w;
+    outline-offset: 2px;
 }
 
 .customers-slider .slick-dots li.slick-active {
-    &:before {
-        content: '';
-        width: 20px;
-        height: 20px;
-        border: 1px solid $w;
-        position: absolute;
-        border-radius: 50%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
+    outline: 1px solid $w;
+    outline-offset: 2px;
 }
 
 .customers-slider .slick-track {
@@ -980,13 +959,13 @@ h3 {
                 height: 100px;
                 position: relative;
 
-                & img {
+                & .icon {
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     width: 40px;
-                    width: 40px;
+                    height: 40px;
                 }
             }
         }
@@ -1043,14 +1022,20 @@ h3 {
                         height: 24px;
                         background-color: $gray;
                         position: absolute;
-                        right: -150%;
+                        right: -140%;
+                    }
+
+                    & .icon {
+                        width: 24px;
+                        height: 24px;
+                        transition: fill .3s ease-in-out;
+                    }
+
+                    &:hover .icon {
+                        fill: $royal-blue
                     }
                 }
 
-                & img {
-                    width: 24px;
-                    height: 24px;
-                }
             }
 
             &--nav li {
@@ -1077,6 +1062,14 @@ h3 {
                     background-color: $royal-blue;
                     border-radius: 4px;
                     padding: 10px 10px 4px 14px;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        background-color: $dark-blue;
+                    }
+                    & .icon {
+                        width: 24px;
+                        height: 24px;
+                    }
                 }
             }
         }
