@@ -35,7 +35,7 @@ $(document).ready(function () {
         slidesToShow: 3,
         dots: true,
         arrows: true,
-        speed: 500,
+        speed: 700,
         prevArrow: `<button class="slick-prev slick-arrow"><svg class="icon slider-icon">
             <use xlink:href="#sprt-arrow-left-b"></use>
                     </svg></button>`,

@@ -22,6 +22,23 @@ h3 {
   height: 18px;
 }
 
+.container-wrap {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.container-wrap__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.container-wrap__header--subtitle {
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 18px auto 0;
+  color: #6C6C72;
+}
+
 .white-section {
   color: #fff;
 }
@@ -34,12 +51,9 @@ h3 {
   background: url(../img/hero-background-image.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 1024px;
-  padding: 35px 0 0 0;
 }
-.hero__top {
-  max-width: 1170px;
-  margin: 0 auto 60px;
+.hero .container-wrap {
+  padding: 35px 20px 80px;
 }
 .hero__top-contacts {
   display: -webkit-box;
@@ -161,8 +175,6 @@ h3 {
   line-height: 1.5;
 }
 .hero__main {
-  max-width: 1170px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,6 +187,7 @@ h3 {
   -webkit-column-gap: 170px;
      -moz-column-gap: 170px;
           column-gap: 170px;
+  padding-top: 65px;
 }
 .hero__main > div {
   -ms-flex-preferred-size: 50%;
@@ -225,22 +238,6 @@ h3 {
 }
 
 /*About*/
-.container-wrap {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 120px 0;
-}
-.container-wrap__header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-.container-wrap__header--subtitle {
-  line-height: 1.5;
-  max-width: 600px;
-  margin: 18px auto 0;
-  color: #6C6C72;
-}
-
 .about__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,12 +481,14 @@ h3 {
 .checkout-slider .slick-sprev {
   -webkit-transform: translateX(200px);
           transform: translateX(200px);
+  opacity: 0.7;
 }
 
 .checkout-slider .slick-snext {
   -webkit-transform: translateX(-200px);
           transform: translateX(-200px);
   z-index: 1;
+  opacity: 0.7;
 }
 
 .checkout-slider .slider .slick-dots {
@@ -910,7 +909,7 @@ h3 {
 
 /*Recent blog*/
 .recent .container-wrap {
-  padding: 120px 0 235px;
+  padding: 120px 20px 235px;
 }
 .recent__posts {
   display: -webkit-box;
@@ -1132,4 +1131,105 @@ h3 {
   font-size: 2em;
   font-weight: 300;
   margin-bottom: -4px;
+}
+
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.9em;
+  }
+  .container-wrap {
+    max-width: 1100px;
+  }
+  .hero__top-nav {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    font-size: 1.18em;
+    padding: 5px 5px 5px 30px;
+  }
+  .hero__top-nav .logo {
+    padding: 26px 16px;
+    width: 180px;
+  }
+  .hero__top-nav .logo:before {
+    height: 62px;
+  }
+  .hero__top-nav ul {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+  .hero__top-nav .download-btn {
+    color: #fff;
+    background: #5956E9;
+    border-radius: 5px;
+    padding: 12px 15px 8px;
+    line-height: 1.5;
+  }
+  .app-features__wraper-item h4 {
+    margin-top: 16px;
+  }
+  .app-features__wraper-item .features-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .app-features .features-infographics {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .app-features .features-infographics img {
+    border-radius: 45px;
+  }
+  .team__wraper-item .team-avatar-wrap {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 50px;
+  }
+  .checkout-slider .slider:before {
+    width: 29.7%;
+    height: 100%;
+  }
+  .checkout-slider .slick-center img {
+    -webkit-transform: scale(1.11);
+            transform: scale(1.11);
+    margin-top: -5px;
+  }
+  .download__info-graphiks {
+    padding-left: 60px;
+  }
+  .download__info-graphiks .elips {
+    width: 180px;
+    -webkit-transform: translate(100px, -50px);
+            transform: translate(100px, -50px);
+  }
+  .footer__contacts {
+    border-radius: 30px;
+    padding: 50px 50px;
+  }
+  .footer__contacts-item {
+    padding-right: 5%;
+  }
+  .footer__contacts-item--icon-wraper {
+    background-color: #5956E9;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: relative;
+  }
+  .footer__contacts-item--icon-wraper .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+  }
+  .footer__contacts-item:last-child {
+    margin-left: 50px;
+  }
 }

@@ -9,6 +9,10 @@ $w: #fff;
 $font-josefin-sans: "Josefin Sans", sans-serif;
 $font-work-sans: "Work Sans", sans-serif;
 
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
 
 
 body {
@@ -34,6 +38,25 @@ h3 {
     height: 18px;
 }
 
+.container-wrap {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 120px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &__header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        &--subtitle {
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 18px auto 0;
+            color: $gray;
+        }
+    }
+}
+
 .white-section {
     color: $w;
 
@@ -47,12 +70,12 @@ h3 {
     background: url(../img/hero-background-image.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    height: 1024px;
-    padding: 35px 0 0 0;
+
+    .container-wrap {
+        padding: 35px 20px 80px;
+    }
 
     &__top {
-        max-width: 1170px;
-        margin: 0 auto 60px;
 
         &-contacts {
             display: flex;
@@ -156,12 +179,11 @@ h3 {
     }
 
     &__main {
-        max-width: 1170px;
-        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
         column-gap: 170px;
+        padding-top: 65px;
 
         &>div {
             flex-basis: 50%;
@@ -220,23 +242,6 @@ h3 {
 
 /*About*/
 
-.container-wrap {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 120px 0;
-
-    &__header {
-        text-align: center;
-        margin-bottom: 60px;
-
-        &--subtitle {
-            line-height: 1.5;
-            max-width: 600px;
-            margin: 18px auto 0;
-            color: $gray;
-        }
-    }
-}
 
 .about {
     &__info {
@@ -474,11 +479,13 @@ h3 {
 
 .checkout-slider .slick-sprev {
     transform: translateX(200px);
+    opacity: .7;
 }
 
 .checkout-slider .slick-snext {
     transform: translateX(-200px);
     z-index: 1;
+    opacity: .7;
 }
 
 .checkout-slider .slider .slick-dots {
@@ -881,7 +888,7 @@ h3 {
 /*Recent blog*/
 .recent {
     & .container-wrap {
-        padding: 120px 0 235px;
+        padding: 120px 20px 235px;
     }
 
     &__posts {
@@ -1063,9 +1070,11 @@ h3 {
                     border-radius: 4px;
                     padding: 10px 10px 4px 14px;
                     transition: all .3s ease-in-out;
+
                     &:hover {
                         background-color: $dark-blue;
                     }
+
                     & .icon {
                         width: 24px;
                         height: 24px;
@@ -1091,3 +1100,147 @@ h3 {
         }
     }
 }
+
+
+
+@media (max-width: $breakpoint_xxl) {
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.9em;
+    }
+
+    .container-wrap {
+        max-width: 1100px;
+    }
+
+    .hero {
+        &__top {
+            &-nav {
+                column-gap: 20px;
+                font-size: 1.18em;
+                padding: 5px 5px 5px 30px;
+
+                .logo {
+                    padding: 26px 16px;
+                    width: 180px;
+
+                    &:before {
+                        height: 62px;
+                    }
+                }
+
+                ul {
+                    column-gap: 30px;
+                }
+
+
+                .download-btn {
+                    color: $w;
+                    background: $royal-blue;
+                    border-radius: 5px;
+                    padding: 12px 15px 8px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    .app-features {
+        &__wraper {
+            &-item {
+                h4 {
+                    margin-top: 16px;
+                }
+
+                & .features-icon {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .features-infographics {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+
+            img {
+                border-radius: 45px;
+            }
+        }
+    }
+
+    .team {
+        &__wraper {
+            &-item {
+                & .team-avatar-wrap {
+                    width: 180px;
+                    height: 180px;
+                    margin: 0 auto 50px;
+                }
+            }
+        }
+    }
+
+    .checkout-slider .slider:before {
+        width: 29.7%;
+        height: 100%;
+    }
+        .checkout-slider .slick-center img {
+            transform: scale(1.11);
+            margin-top: -5px;
+        }
+
+    .download {
+        &__info {
+            &-graphiks {
+                padding-left: 60px;
+                & .elips {
+                    width: 180px;
+                    transform: translate(100px, -50px);
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__contacts {
+            border-radius: 30px;
+            padding: 50px 50px;
+
+            &-item {
+                padding-right: 5%;
+
+                &--icon-wraper {
+                    background-color: $royal-blue;
+                    border-radius: 50%;
+                    width: 90px;
+                    height: 90px;
+                    position: relative;
+
+                    & .icon {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+
+            &-item:last-child {
+                margin-left: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint_xl) {}
+
+@media (max-width: $breakpoint_md) {}
+
+@media (max-width: $breakpoint_sm) {}
