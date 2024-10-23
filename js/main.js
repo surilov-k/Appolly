@@ -104,6 +104,7 @@ $(document).ready(function () {
         slidesToShow: 1,
         centerPadding: '0',
         swipe: true,
+        adaptiveHeight: true,
         customPaging: function (slider, i) {
             return '';
         },
