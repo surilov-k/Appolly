@@ -62,7 +62,7 @@ h3 {
     max-width: 1210px;
     margin: 0 auto;
     padding: 120px 20px;
-    background-color: rgba(0, 0, 0, 0.2);
+    //background-color: rgba(0, 0, 0, 0.2);
 
     &__header {
         text-align: center;
@@ -176,7 +176,7 @@ h3 {
                 }
             }
 
-            ul {
+            .main-menu {
                 display: flex;
                 column-gap: 40px;
                 flex-grow: 1;
@@ -186,6 +186,29 @@ h3 {
                     text-decoration: underline;
                     text-underline-offset: 4px;
                 }
+            }
+
+            .mobile-menu {
+                display: none;
+                background-color: $w;
+                box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.14);
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                padding: 70px 60px 40px 40px;
+                z-index: 2;
+                border-radius: 10px;
+                font-size: 1.25em;
+                transition: 0.3s ease;
+
+                li:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+            }
+
+            .mobile-menu.active {
+                opacity: 1;
             }
 
             .push-right {
@@ -198,6 +221,75 @@ h3 {
                 border-radius: 5px;
                 padding: 12px 15px 8px;
                 line-height: 1.5;
+                margin-left: auto;
+            }
+
+            .mob-menu-overlay {
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: none;
+            }
+
+            .mob-menu-overlay.active {
+                display: block;
+            }
+
+            .hum-menu-btn {
+                display: none;
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                position: relative;
+                border-radius: 50%;
+                background-color: transparent;
+                transition: 0.3s ease-in-out;
+                z-index: 3;
+
+                span {
+                    height: 3px;
+                    width: 60%;
+                    background-color: $dark-blue;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: 0.3s ease-in-out;
+                }
+
+                span:first-child {
+                    top: 25%;
+                }
+
+                span:last-child {
+                    top: 75%;
+                }
+            }
+
+            .hum-menu-btn.active {
+                background-color: $royal-blue;
+
+                span:first-child {
+                    background-color: $w;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    opacity: 1;
+                }
+
+                span {
+                    opacity: 0;
+                }
+
+                span:last-child {
+                    background-color: $w;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                    opacity: 1;
+                }
             }
         }
     }
@@ -1199,7 +1291,7 @@ h3 {
                     }
                 }
 
-                ul {
+                .main-menu {
                     column-gap: 30px;
                 }
 
@@ -1336,10 +1428,16 @@ h3 {
     .hero {
         &__top {
             &-nav {
-                ul {
+                padding-left: 20px;
+
+                .main-menu {
                     display: none;
                 }
 
+                .mobile-menu,
+                .hum-menu-btn {
+                    display: block;
+                }
             }
 
             &-contacts {
@@ -1450,7 +1548,7 @@ h3 {
         height: 400px;
         padding: 10px 0;
     }
-        
+
 
     .checkout-slider .slick-center img {
         transform: scale(1.03);
@@ -1627,4 +1725,22 @@ h3 {
     }
 }
 
-@media (max-width: $breakpoint_sm) {}
+@media (max-width: $breakpoint_sm) {
+    .hero__top-nav .mobile-menu {
+        position: fixed;
+        border-radius: 0;
+        top: 0;
+        height: 100vh;
+        opacity: 1;
+        left: -100%;
+    }
+
+    .hero__top-nav .mobile-menu.active {
+        left: 0;
+    }
+
+    .hero__top-nav .hum-menu-btn.active {
+        position: fixed;
+        top: 20px;
+    }
+}

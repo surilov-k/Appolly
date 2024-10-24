@@ -124,3 +124,18 @@ ajax.onload = function () {
         document.body.childNodes[0]
     );
 };
+
+let humMenuBtn = document.querySelector('.hum-menu-btn');
+let mobileMenu = document.querySelector('.mobile-menu');
+let mobOverlay = document.querySelector('.mob-menu-overlay');
+
+humMenuBtn.addEventListener('click', function() {
+    humMenuBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    mobOverlay.classList.toggle('active');
+});
+mobOverlay.addEventListener('click', function () {
+    humMenuBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    mobOverlay.classList.toggle('active');
+});
