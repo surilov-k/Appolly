@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 // Colors
 $royal-blue: #5956E9;
@@ -7,7 +6,6 @@ $dark-blue: #232233;
 $gray: #6C6C72;
 $w: #fff;
 $font-josefin-sans: "Josefin Sans", sans-serif;
-$font-work-sans: "Work Sans", sans-serif;
 
 $breakpoint_xxl: 1200px;
 $breakpoint_xl: 1024px;
@@ -26,13 +24,14 @@ body {
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 0.9545454545454546rem + 2.727272727272727vw, 3rem);
     text-transform: uppercase;
     font-weight: 400;
 }
 
 h3 {
-    font-size: 1.953em;
+    font-size: 1.953rem;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -59,14 +58,21 @@ h3 {
 }
 
 .container-wrap {
-    max-width: 1210px;
-    margin: 0 auto;
+    width: min(100%, 75.625rem);
+    margin-inline: auto;
+    //max-width: 1210px;
+    //margin: 0 auto;
     padding: 120px 20px;
-    //background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 
     &__header {
         text-align: center;
         margin-bottom: 60px;
+
+        h3 {
+            font-size: 1.5625rem;
+            font-size: clamp(1.5625rem, 1.4034090909090908rem + 0.7954545454545454vw, 2rem);
+        }
 
         &--subtitle {
             line-height: 1.5;
@@ -144,7 +150,7 @@ h3 {
             column-gap: 40px;
             background-color: $w;
             border-radius: 5px;
-            font-size: 1.25em;
+            font-size: 1.25rem;
             text-transform: uppercase;
             padding: 5px 5px 5px 50px;
             line-height: 1.5;
@@ -199,7 +205,7 @@ h3 {
                 padding: 70px 60px 40px 40px;
                 z-index: 20;
                 border-radius: 10px;
-                font-size: 1.25em;
+                font-size: 1.25rem;
                 transition: 0.3s ease;
 
                 li:not(:last-child) {
@@ -343,7 +349,7 @@ h3 {
         &-download p {
             text-transform: uppercase;
             color: $dark-blue;
-            font-size: 1.56em;
+            font-size: 1.56rem;
             margin-bottom: 5px;
         }
 
@@ -408,7 +414,7 @@ h3 {
                 }
 
                 & h4 {
-                    font-size: 1.25em;
+                    font-size: 1.25rem;
                     text-transform: uppercase;
                     margin-bottom: 13px;
                 }
@@ -416,7 +422,7 @@ h3 {
                 & p {
                     line-height: 1.5;
                     color: $gray;
-                    font-size: 1em;
+                    font-size: 1rem;
                 }
             }
         }
@@ -487,7 +493,7 @@ h3 {
             }
 
             & h4 {
-                font-size: 1.25em;
+                font-size: 1.25rem;
                 text-transform: uppercase;
                 margin-bottom: 13px;
                 margin-top: 20px;
@@ -495,7 +501,7 @@ h3 {
 
             & p {
                 line-height: 1.5;
-                font-size: 1em;
+                font-size: 1rem;
             }
 
             .features-infographics {
@@ -506,6 +512,24 @@ h3 {
     }
 }
 
+.checkout-slider {
+    position: relative;
+}
+
+.slider-iphone-overlay {
+    width: 100px;
+    height: 100px;
+    background-color: #7572ff;
+    background: url(../img/slider/iPhoneX-Mockup-bg.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 10;
+    transform: translateY(-10px) scale(1.2);
+    pointer-events: none;
+}
+
 .checkout-slider .slider {
     position: relative;
     padding: 0 60px;
@@ -514,7 +538,7 @@ h3 {
         content: '';
         width: 318px;
         height: 620px;
-        background: url(../img/slider/iPhoneX-Mockup-bg.png) no-repeat;
+        //background: url(../img/slider/iPhoneX-Mockup-bg.png) no-repeat;
         background-size: contain;
         position: absolute;
         left: 50%;
@@ -522,6 +546,7 @@ h3 {
         transform: translate(-50%, 0);
         z-index: 10;
         margin-left: 3px;
+        pointer-events: none;
     }
 }
 
@@ -593,7 +618,7 @@ h3 {
     padding: 30px 0;
     transition: .3s;
     z-index: 2;
-    width: 300px !important;
+    //width: 300px !important;
 }
 
 .checkout-slider .slick-sprev {
@@ -652,8 +677,10 @@ h3 {
 .checkout-slider .slick-center img {
     transform: scale(1.1);
     transition: all 0.5s ease;
-    margin-top: -10px;
+    margin-top: -5px;
 }
+
+
 
 /*Download*/
 .download {
@@ -707,11 +734,11 @@ h3 {
                     text-transform: uppercase;
 
                     & .stat-count {
-                        font-size: 1.56em;
+                        font-size: 1.56rem;
                     }
 
                     & .stat-descr {
-                        font-size: 1.25em;
+                        font-size: 1.25rem;
                     }
                 }
             }
@@ -845,7 +872,7 @@ h3 {
             & .team-position {
                 color: $gray;
                 text-transform: uppercase;
-                font-size: 1.25em;
+                font-size: 1.25rem;
                 font-weight: 600;
                 margin: 14px 0;
                 display: block;
@@ -1021,7 +1048,7 @@ h3 {
     &__position {
         color: $dark-blue;
         font-weight: 600;
-        font-size: 1.25em;
+        font-size: 1.25rem;
         display: block;
         text-transform: uppercase;
         margin: 14px 0;
@@ -1056,7 +1083,7 @@ h3 {
 
             &--head {
                 font-weight: 600;
-                font-size: 1.25em;
+                font-size: 1.25rem;
                 margin: 40px 0 10px;
                 text-transform: uppercase;
                 padding: 0 18px;
@@ -1080,7 +1107,7 @@ h3 {
 
             &--read-more {
                 font-weight: 600;
-                font-size: 1.25em;
+                font-size: 1.25rem;
                 text-transform: uppercase;
                 text-decoration: underline;
                 color: $royal-blue;
@@ -1114,7 +1141,7 @@ h3 {
             display: flex;
             align-items: center;
             column-gap: 18px;
-            font-size: 1.56em;
+            font-size: 1.56rem;
             font-weight: 600;
             position: relative;
             padding-right: 9.5%;
@@ -1125,6 +1152,7 @@ h3 {
                 width: 100px;
                 height: 100px;
                 position: relative;
+                flex-shrink: 0;
 
                 & .icon {
                     position: absolute;
@@ -1254,7 +1282,7 @@ h3 {
         column-gap: 10px;
 
         & .c-symbol {
-            font-size: 2em;
+            font-size: 2rem;
             font-weight: 300;
             margin-bottom: -4px;
         }
@@ -1265,11 +1293,11 @@ h3 {
 
 @media (max-width: $breakpoint_xxl) {
     h2 {
-        font-size: 2.5em;
+        //font-size: 2.5rem;
     }
 
     h3 {
-        font-size: 1.9em;
+        font-size: 1.9rem;
     }
 
     .container-wrap {
@@ -1280,7 +1308,7 @@ h3 {
         &__top {
             &-nav {
                 column-gap: 20px;
-                font-size: 1.18em;
+                font-size: 1.18rem;
                 padding: 5px 5px 5px 30px;
 
                 .logo {
@@ -1351,7 +1379,7 @@ h3 {
     }
 
     .checkout-slider .slick-center img {
-        transform: scale(1.11);
+        //transform: scale(1.11);
         margin-top: -5px;
     }
 
@@ -1406,11 +1434,11 @@ h3 {
 @media (max-width: $breakpoint_md) {
 
     h2 {
-        font-size: 2em;
+        //font-size: 2rem;
     }
 
     h3 {
-        font-size: 1.25em;
+        font-size: 1.25rem;
     }
 
     .container-wrap {
@@ -1421,7 +1449,7 @@ h3 {
             margin-bottom: 40px;
 
             h3 {
-                font-size: 1.9em;
+                font-size: 1.9rem;
             }
         }
     }
@@ -1459,7 +1487,7 @@ h3 {
                 }
 
                 & h2 {
-                    font-size: 1.9em;
+                    //font-size: 1.9rem;
                 }
 
                 & p {
@@ -1485,7 +1513,7 @@ h3 {
 
             &-download {
                 p {
-                    font-size: 1.25em;
+                    font-size: 1.25rem;
                 }
             }
         }
@@ -1533,28 +1561,32 @@ h3 {
     }
 
     /*checkout slider*/
-    .checkout-slider .slider {
-        padding: 0;
-    }
-
     .checkout-slider .slick-sprev {
-        transform: translateX(150px);
+        transform: translateX(120px);
     }
 
     .checkout-slider .slick-snext {
-        transform: translateX(-150px);
+        transform: translateX(-120px);
     }
 
     .checkout-slider .slick-slide {
-        height: 400px;
         padding: 10px 0;
     }
 
 
     .checkout-slider .slick-center img {
-        transform: scale(1.03);
-        margin-top: -12px;
+        transform: scale(1.08);
+        margin-top: 4px;
+        margin-bottom: -4px;
+        margin-left: -6px;
     }
+         .checkout-slider .slick-slide:has(+ .slick-center+*) {
+             transform: translateX(-15px);
+         }
+    
+         .checkout-slider .slick-center+* {
+             transform: translateX(15px);
+         }
 
     /*download*/
     .download__info-about>*:nth-child(2) {
@@ -1582,11 +1614,11 @@ h3 {
                         width: 100px;
 
                         .stat-count {
-                            font-size: 1em;
+                            font-size: 1rem;
                         }
 
                         .stat-descr {
-                            font-size: 0.85em;
+                            font-size: 0.85rem;
                         }
                     }
 
@@ -1633,7 +1665,7 @@ h3 {
     }
 
     .team__wraper-item .team-position {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .team__wraper-item .team-social {
@@ -1677,7 +1709,7 @@ h3 {
     }
 
     .footer__contacts-item {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .footer__contacts-item:last-child {
@@ -1752,11 +1784,11 @@ h3 {
     }
 
     h2 {
-        font-size: 1.562em;
+        //font-size: 1.562rem;
     }
 
     h3 {
-        font-size: 1.562em;
+        font-size: 1.562rem;
     }
 
     .container-wrap {
@@ -1767,7 +1799,7 @@ h3 {
             margin-bottom: 40px;
 
             h3 {
-                font-size: 1.562em;
+                font-size: 1.562rem;
             }
         }
     }
@@ -1791,7 +1823,7 @@ h3 {
                 }
 
                 .download-btn {
-                    font-size: .625em;
+                    font-size: .625rem;
                 }
 
                 .main-menu {
@@ -1825,7 +1857,7 @@ h3 {
                 }
 
                 & h2 {
-                    font-size: 1.562em;
+                    //font-size: 1.562rem;
                     font-weight: 600;
                 }
 
@@ -1858,7 +1890,7 @@ h3 {
 
             &-download {
                 p {
-                    font-size: 1.25em;
+                    font-size: 1.25rem;
                 }
 
                 img {
@@ -1930,31 +1962,50 @@ h3 {
     }
 
     /*checkout slider*/
+
+    .interface-look {
+        .container-wrap {
+            padding: 60px 0 80px;
+
+            &__header {
+                padding: 0 20px;
+            }
+        }
+    }
+
     .checkout-slider .slider {
-        padding: 0;
+        //padding: 0;
 
         &:before {
             width: 77%;
         }
     }
 
+    .checkout-slider .slick-list {
+        overflow: visible;
+    }
+
+    .checkout-slider .slick-slide:has(+ .slick-center+*) {
+        opacity: 0.7;
+        transform: translateX(-15px);
+    }
+
+    .checkout-slider .slick-center+* {
+        opacity: 0.7;
+        transform: translateX(15px);
+    }
+
     .checkout-slider .slick-sprev {
-        transform: translateX(150px);
+        transform: translateX(0px);
     }
 
     .checkout-slider .slick-snext {
-        transform: translateX(-150px);
+        transform: translateX(0px);
     }
 
     .checkout-slider .slick-slide {
-        height: auto;
+        //height: auto;
         padding: 10px 0;
-    }
-
-
-    .checkout-slider .slick-center img {
-        transform: scale(1.03);
-        margin-top: -12px;
     }
 
     /*download*/
@@ -2000,11 +2051,11 @@ h3 {
                         flex: 1 1 33.33%;
 
                         .stat-count {
-                            font-size: 1em;
+                            font-size: 1rem;
                         }
 
                         .stat-descr {
-                            font-size: 0.85em;
+                            font-size: 0.85rem;
                         }
                     }
 
@@ -2107,7 +2158,7 @@ h3 {
     }
 
     .footer__contacts-item {
-        font-size: 1.1em;
+        font-size: 1.1rem;
         column-gap: 12px;
         padding: 0;
     }
@@ -2142,9 +2193,11 @@ h3 {
     .footer {
         &__info {
             flex-direction: column;
+
             &-item:not(:last-child) {
                 margin-bottom: 30px;
             }
+
             &-item:first-child {
                 flex-basis: 40%;
             }
@@ -2160,7 +2213,7 @@ h3 {
     }
 
     .footer__copy {
-        font-size: .81em;
+        font-size: .81rem;
     }
 
     .footer__info-item--social a::after {

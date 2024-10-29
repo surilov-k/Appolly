@@ -111,6 +111,26 @@ $(document).ready(function () {
     });
 
 
+
+
+    let slideCenterWidth = document.querySelector('.slick-center img');
+    let sliderIphoneOverlay = document.querySelector('.slider-iphone-overlay');
+
+    const observer = new ResizeObserver(entries => {
+        for (let entry of entries) {
+            const { width, height } = entry.contentRect;
+
+            // Применяем новые значения к box2
+            sliderIphoneOverlay.style.width = `${width}px`;
+            sliderIphoneOverlay.style.height = `${height}px`;
+        }
+    });
+
+    // Начинаем отслеживание размера box
+    observer.observe(slideCenterWidth);
+
+    console.log(slideCenterWidth);
+
 });
 
 
@@ -139,3 +159,4 @@ mobOverlay.addEventListener('click', function () {
     mobileMenu.classList.toggle('active');
     mobOverlay.classList.toggle('active');
 });
+

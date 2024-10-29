@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   width: 100%;
   height: 100%;
@@ -12,13 +11,14 @@ body {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 0.9545454545rem + 2.7272727273vw, 3rem);
   text-transform: uppercase;
   font-weight: 400;
 }
 
 h3 {
-  font-size: 1.953em;
+  font-size: 1.953rem;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -51,13 +51,18 @@ h3 {
 }
 
 .container-wrap {
-  max-width: 1210px;
-  margin: 0 auto;
+  width: min(100%, 75.625rem);
+  margin-inline: auto;
   padding: 120px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .container-wrap__header {
   text-align: center;
   margin-bottom: 60px;
+}
+.container-wrap__header h3 {
+  font-size: 1.5625rem;
+  font-size: clamp(1.5625rem, 1.4034090909rem + 0.7954545455vw, 2rem);
 }
 .container-wrap__header--subtitle {
   line-height: 1.5;
@@ -145,7 +150,7 @@ h3 {
           column-gap: 40px;
   background-color: #fff;
   border-radius: 5px;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   text-transform: uppercase;
   padding: 5px 5px 5px 50px;
   line-height: 1.5;
@@ -206,7 +211,7 @@ h3 {
   padding: 70px 60px 40px 40px;
   z-index: 20;
   border-radius: 10px;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -344,7 +349,7 @@ h3 {
 .hero__main-download p {
   text-transform: uppercase;
   color: #232233;
-  font-size: 1.56em;
+  font-size: 1.56rem;
   margin-bottom: 5px;
 }
 .hero__main-download img {
@@ -411,14 +416,14 @@ h3 {
   fill: #5956E9;
 }
 .about__info-advantages--item h4 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   text-transform: uppercase;
   margin-bottom: 13px;
 }
 .about__info-advantages--item p {
   line-height: 1.5;
   color: #6C6C72;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /*App Features*/
@@ -487,19 +492,38 @@ h3 {
   height: 50px;
 }
 .app-features__wraper-item h4 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   text-transform: uppercase;
   margin-bottom: 13px;
   margin-top: 20px;
 }
 .app-features__wraper-item p {
   line-height: 1.5;
-  font-size: 1em;
+  font-size: 1rem;
 }
 .app-features__wraper-item .features-infographics {
   -webkit-box-shadow: 40px 40px 100px 0 rgba(24, 48, 63, 0.5);
           box-shadow: 40px 40px 100px 0 rgba(24, 48, 63, 0.5);
   border-radius: 70px;
+}
+
+.checkout-slider {
+  position: relative;
+}
+
+.slider-iphone-overlay {
+  width: 100px;
+  height: 100px;
+  background-color: #7572ff;
+  background: url(../img/slider/iPhoneX-Mockup-bg.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: 10;
+  -webkit-transform: translateY(-10px) scale(1.2);
+          transform: translateY(-10px) scale(1.2);
+  pointer-events: none;
 }
 
 .checkout-slider .slider {
@@ -510,7 +534,6 @@ h3 {
   content: "";
   width: 318px;
   height: 620px;
-  background: url(../img/slider/iPhoneX-Mockup-bg.png) no-repeat;
   background-size: contain;
   position: absolute;
   left: 50%;
@@ -519,6 +542,7 @@ h3 {
           transform: translate(-50%, 0);
   z-index: 10;
   margin-left: 3px;
+  pointer-events: none;
 }
 
 .checkout-slider .slick-track {
@@ -596,7 +620,6 @@ h3 {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 2;
-  width: 300px !important;
 }
 
 .checkout-slider .slick-sprev {
@@ -669,7 +692,7 @@ h3 {
           transform: scale(1.1);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 /*Download*/
@@ -738,10 +761,10 @@ h3 {
   text-transform: uppercase;
 }
 .download__info-about-statistics .stat-item .stat-count {
-  font-size: 1.56em;
+  font-size: 1.56rem;
 }
 .download__info-about-statistics .stat-item .stat-descr {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 .download__info-about--dwnl-wrap img {
   width: 150px;
@@ -869,7 +892,7 @@ h3 {
 .team__wraper-item .team-position {
   color: #6C6C72;
   text-transform: uppercase;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: 600;
   margin: 14px 0;
   display: block;
@@ -1057,7 +1080,7 @@ h3 {
 .customer-slider-item__position {
   color: #232233;
   font-weight: 600;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   display: block;
   text-transform: uppercase;
   margin: 14px 0;
@@ -1092,7 +1115,7 @@ h3 {
 }
 .recent__posts-item--head {
   font-weight: 600;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   margin: 40px 0 10px;
   text-transform: uppercase;
   padding: 0 18px;
@@ -1112,7 +1135,7 @@ h3 {
 }
 .recent__posts-item--read-more {
   font-weight: 600;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   text-transform: uppercase;
   text-decoration: underline;
   color: #5956E9;
@@ -1153,7 +1176,7 @@ h3 {
   -webkit-column-gap: 18px;
      -moz-column-gap: 18px;
           column-gap: 18px;
-  font-size: 1.56em;
+  font-size: 1.56rem;
   font-weight: 600;
   position: relative;
   padding-right: 9.5%;
@@ -1164,6 +1187,8 @@ h3 {
   width: 100px;
   height: 100px;
   position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .footer__contacts-item--icon-wraper .icon {
   position: absolute;
@@ -1296,17 +1321,14 @@ h3 {
           column-gap: 10px;
 }
 .footer__copy .c-symbol {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 300;
   margin-bottom: -4px;
 }
 
 @media (max-width: 1200px) {
-  h2 {
-    font-size: 2.5em;
-  }
   h3 {
-    font-size: 1.9em;
+    font-size: 1.9rem;
   }
   .container-wrap {
     max-width: 1100px;
@@ -1315,7 +1337,7 @@ h3 {
     -webkit-column-gap: 20px;
        -moz-column-gap: 20px;
             column-gap: 20px;
-    font-size: 1.18em;
+    font-size: 1.18rem;
     padding: 5px 5px 5px 30px;
   }
   .hero__top-nav .logo {
@@ -1362,8 +1384,6 @@ h3 {
     height: 100%;
   }
   .checkout-slider .slick-center img {
-    -webkit-transform: scale(1.11);
-            transform: scale(1.11);
     margin-top: -5px;
   }
   .download__info-graphiks {
@@ -1402,11 +1422,8 @@ h3 {
   }
 }
 @media (max-width: 768px) {
-  h2 {
-    font-size: 2em;
-  }
   h3 {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
   .container-wrap {
     max-width: 730px;
@@ -1416,7 +1433,7 @@ h3 {
     margin-bottom: 40px;
   }
   .container-wrap__header h3 {
-    font-size: 1.9em;
+    font-size: 1.9rem;
   }
   .hero__top-nav {
     padding-left: 20px;
@@ -1442,9 +1459,6 @@ h3 {
     top: -35px;
     right: -35px;
   }
-  .hero__main-description h2 {
-    font-size: 1.9em;
-  }
   .hero__main-description p {
     margin-bottom: 20px;
   }
@@ -1465,7 +1479,7 @@ h3 {
             flex: 1 1 40%;
   }
   .hero__main-download p {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
   /*About*/
   .about__info-column:first-child {
@@ -1496,25 +1510,31 @@ h3 {
     border-radius: 30px;
   }
   /*checkout slider*/
-  .checkout-slider .slider {
-    padding: 0;
-  }
   .checkout-slider .slick-sprev {
-    -webkit-transform: translateX(150px);
-            transform: translateX(150px);
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
   }
   .checkout-slider .slick-snext {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateX(-120px);
+            transform: translateX(-120px);
   }
   .checkout-slider .slick-slide {
-    height: 400px;
     padding: 10px 0;
   }
   .checkout-slider .slick-center img {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
-    margin-top: -12px;
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+    margin-top: 4px;
+    margin-bottom: -4px;
+    margin-left: -6px;
+  }
+  .checkout-slider .slick-slide:has(+ .slick-center + *) {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+  .checkout-slider .slick-center + * {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
   }
   /*download*/
   .download__info-about > *:nth-child(2) {
@@ -1538,10 +1558,10 @@ h3 {
     width: 100px;
   }
   .download__info-about-statistics .stat-item .stat-count {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .download__info-about-statistics .stat-item .stat-descr {
-    font-size: 0.85em;
+    font-size: 0.85rem;
   }
   /*how-to*/
   .how-to__video {
@@ -1570,7 +1590,7 @@ h3 {
     margin: 0 auto 25px;
   }
   .team__wraper-item .team-position {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .team__wraper-item .team-social {
     -webkit-column-gap: 20px;
@@ -1607,7 +1627,7 @@ h3 {
             transform: translateY(-60px);
   }
   .footer__contacts-item {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .footer__contacts-item:last-child {
     margin-left: 0;
@@ -1668,11 +1688,8 @@ h3 {
     position: fixed;
     top: 20px;
   }
-  h2 {
-    font-size: 1.562em;
-  }
   h3 {
-    font-size: 1.562em;
+    font-size: 1.562rem;
   }
   .container-wrap {
     max-width: 730px;
@@ -1682,7 +1699,7 @@ h3 {
     margin-bottom: 40px;
   }
   .container-wrap__header h3 {
-    font-size: 1.562em;
+    font-size: 1.562rem;
   }
   .hero .container-wrap {
     padding: 35px 20px 80px;
@@ -1698,7 +1715,7 @@ h3 {
     height: 40px;
   }
   .hero__top-nav .download-btn {
-    font-size: 0.625em;
+    font-size: 0.625rem;
   }
   .hero__top-nav .main-menu {
     display: none;
@@ -1725,7 +1742,6 @@ h3 {
     height: 111.1%;
   }
   .hero__main-description h2 {
-    font-size: 1.562em;
     font-weight: 600;
   }
   .hero__main-description p {
@@ -1753,7 +1769,7 @@ h3 {
             flex: 1 1 100%;
   }
   .hero__main-download p {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
   .hero__main-download img {
     width: 110px;
@@ -1804,28 +1820,38 @@ h3 {
     border-radius: 40px;
   }
   /*checkout slider*/
-  .checkout-slider .slider {
-    padding: 0;
+  .interface-look .container-wrap {
+    padding: 60px 0 80px;
+  }
+  .interface-look .container-wrap__header {
+    padding: 0 20px;
   }
   .checkout-slider .slider:before {
     width: 77%;
   }
+  .checkout-slider .slick-list {
+    overflow: visible;
+  }
+  .checkout-slider .slick-slide:has(+ .slick-center + *) {
+    opacity: 0.7;
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+  .checkout-slider .slick-center + * {
+    opacity: 0.7;
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
   .checkout-slider .slick-sprev {
-    -webkit-transform: translateX(150px);
-            transform: translateX(150px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   .checkout-slider .slick-snext {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   .checkout-slider .slick-slide {
-    height: auto;
     padding: 10px 0;
-  }
-  .checkout-slider .slick-center img {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
-    margin-top: -12px;
   }
   /*download*/
   .download__info-about > *:nth-child(2) {
@@ -1875,10 +1901,10 @@ h3 {
             flex: 1 1 33.33%;
   }
   .download__info-about-statistics .stat-item .stat-count {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .download__info-about-statistics .stat-item .stat-descr {
-    font-size: 0.85em;
+    font-size: 0.85rem;
   }
   /*how-to*/
   .how-to__video {
@@ -1956,7 +1982,7 @@ h3 {
     margin: 0 auto;
   }
   .footer__contacts-item {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     -webkit-column-gap: 12px;
        -moz-column-gap: 12px;
             column-gap: 12px;
@@ -2008,7 +2034,7 @@ h3 {
             flex: 1 1 auto;
   }
   .footer__copy {
-    font-size: 0.81em;
+    font-size: 0.81rem;
   }
   .footer__info-item--social a::after {
     right: -140%;
