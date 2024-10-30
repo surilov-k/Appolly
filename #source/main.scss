@@ -519,14 +519,14 @@ h3 {
 .slider-iphone-overlay {
     width: 100px;
     height: 100px;
-    background-color: #7572ff;
     background: url(../img/slider/iPhoneX-Mockup-bg.png) no-repeat;
     background-size: contain;
+    background-position: center;
     position: absolute;
-    inset: 0;
-    margin: auto;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1.13);
     z-index: 10;
-    transform: translateY(-10px) scale(1.2);
     pointer-events: none;
 }
 
@@ -534,20 +534,6 @@ h3 {
     position: relative;
     padding: 0 60px;
 
-    &:before {
-        content: '';
-        width: 318px;
-        height: 620px;
-        //background: url(../img/slider/iPhoneX-Mockup-bg.png) no-repeat;
-        background-size: contain;
-        position: absolute;
-        left: 50%;
-        top: -10px;
-        transform: translate(-50%, 0);
-        z-index: 10;
-        margin-left: 3px;
-        pointer-events: none;
-    }
 }
 
 .checkout-slider .slick-track {
@@ -558,6 +544,7 @@ h3 {
 .checkout-slider .slick-list {
     overflow: hidden;
     transform-style: preserve-3d;
+    padding: 20px 80px !important;
 }
 
 .checkout-slider .slick-arrow {
@@ -615,10 +602,27 @@ h3 {
 .checkout-slider .slick-slide {
     position: relative;
     text-align: center;
-    padding: 30px 0;
     transition: .3s;
     z-index: 2;
-    //width: 300px !important;
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 0 20px;
+    img {
+        object-fit: cover;
+        border-radius: 16px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.checkout-slider .slick-center {
+    transform: scale(1.1);
+}
+
+.checkout-slider .slick-center img {
+    //transform: scale(1.1);
+    transition: all 0.5s ease;
+    //margin-top: -5px;
 }
 
 .checkout-slider .slick-sprev {
@@ -674,11 +678,6 @@ h3 {
     outline-offset: 2px;
 }
 
-.checkout-slider .slick-center img {
-    transform: scale(1.1);
-    transition: all 0.5s ease;
-    margin-top: -5px;
-}
 
 
 
@@ -1292,9 +1291,7 @@ h3 {
 
 
 @media (max-width: $breakpoint_xxl) {
-    h2 {
-        //font-size: 2.5rem;
-    }
+
 
     h3 {
         font-size: 1.9rem;
@@ -1378,10 +1375,6 @@ h3 {
         height: 100%;
     }
 
-    .checkout-slider .slick-center img {
-        //transform: scale(1.11);
-        margin-top: -5px;
-    }
 
     .download {
         &__info {
@@ -1433,9 +1426,6 @@ h3 {
 
 @media (max-width: $breakpoint_md) {
 
-    h2 {
-        //font-size: 2rem;
-    }
 
     h3 {
         font-size: 1.25rem;
@@ -1484,10 +1474,6 @@ h3 {
                 &:before {
                     top: -35px;
                     right: -35px;
-                }
-
-                & h2 {
-                    //font-size: 1.9rem;
                 }
 
                 & p {
@@ -1561,32 +1547,26 @@ h3 {
     }
 
     /*checkout slider*/
+    .checkout-slider .slick-slide {
+        padding: 0 5px;
+    }
+
     .checkout-slider .slick-sprev {
-        transform: translateX(120px);
+        transform: translateX(50px);
     }
 
     .checkout-slider .slick-snext {
-        transform: translateX(-120px);
-    }
-
-    .checkout-slider .slick-slide {
-        padding: 10px 0;
+        transform: translateX(-50px);
     }
 
 
-    .checkout-slider .slick-center img {
-        transform: scale(1.08);
-        margin-top: 4px;
-        margin-bottom: -4px;
-        margin-left: -6px;
+    .checkout-slider .slick-slide:has(+ .slick-center+*) {
+        transform: translateX(-15px);
     }
-         .checkout-slider .slick-slide:has(+ .slick-center+*) {
-             transform: translateX(-15px);
-         }
-    
-         .checkout-slider .slick-center+* {
-             transform: translateX(15px);
-         }
+
+    .checkout-slider .slick-center+* {
+        transform: translateX(15px);
+    }
 
     /*download*/
     .download__info-about>*:nth-child(2) {
@@ -1985,6 +1965,7 @@ h3 {
         overflow: visible;
     }
 
+
     .checkout-slider .slick-slide:has(+ .slick-center+*) {
         opacity: 0.7;
         transform: translateX(-15px);
@@ -1996,17 +1977,13 @@ h3 {
     }
 
     .checkout-slider .slick-sprev {
-        transform: translateX(0px);
+        transform: translateX(-20px);
     }
 
     .checkout-slider .slick-snext {
-        transform: translateX(0px);
+        transform: translateX(20px);
     }
 
-    .checkout-slider .slick-slide {
-        //height: auto;
-        padding: 10px 0;
-    }
 
     /*download*/
     .download__info-about>*:nth-child(2) {

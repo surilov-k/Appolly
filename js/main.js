@@ -111,25 +111,20 @@ $(document).ready(function () {
     });
 
 
+    const slideCenterWidth = document.querySelector('.slick-center');
+    const sliderIphoneOverlay = document.querySelector('.slider-iphone-overlay');
 
+    function updateOverlaySize() {
+        sliderIphoneOverlay.style.width = `${slideCenterWidth.offsetWidth}px`;
+        sliderIphoneOverlay.style.height = `${slideCenterWidth.offsetHeight}px`;
+    }
 
-    let slideCenterWidth = document.querySelector('.slick-center img');
-    let sliderIphoneOverlay = document.querySelector('.slider-iphone-overlay');
+    // Обновляем размеры при загрузке страницы
+    updateOverlaySize();
 
-    const observer = new ResizeObserver(entries => {
-        for (let entry of entries) {
-            const { width, height } = entry.contentRect;
-
-            // Применяем новые значения к box2
-            sliderIphoneOverlay.style.width = `${width}px`;
-            sliderIphoneOverlay.style.height = `${height}px`;
-        }
-    });
-
-    // Начинаем отслеживание размера box
+    // Используем ResizeObserver для отслеживания изменений размеров
+    const observer = new ResizeObserver(updateOverlaySize);
     observer.observe(slideCenterWidth);
-
-    console.log(slideCenterWidth);
 
 });
 
@@ -149,7 +144,7 @@ let humMenuBtn = document.querySelector('.hum-menu-btn');
 let mobileMenu = document.querySelector('.mobile-menu');
 let mobOverlay = document.querySelector('.mob-menu-overlay');
 
-humMenuBtn.addEventListener('click', function() {
+humMenuBtn.addEventListener('click', function () {
     humMenuBtn.classList.toggle('active');
     mobileMenu.classList.toggle('active');
     mobOverlay.classList.toggle('active');

@@ -7,14 +7,14 @@ Project Description
 ### Todo
 
 - [ ] Adaptive bug fix  
-- [ ] Checkout slider mobile  
-- [ ] Chuckout slider fix overlay  
 
 ### In Progress
 
 
 ### Done ✓
 
+- [x] Chuckout slider fix overlay  
+- [x] Checkout slider mobile  
 - [x] Adaptive mobile - base  
 - [x] Humburger top nav  
 
