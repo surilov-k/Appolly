@@ -6,10 +6,11 @@ Project Description
 
 ### Todo
 
-- [ ] Adaptive bug fix  
+- [ ] extra small scree 320px  
 
 ### In Progress
 
+- [ ] Adaptive bug fix  
 
 ### Done ✓
 

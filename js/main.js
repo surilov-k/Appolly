@@ -44,7 +44,7 @@ $(document).ready(function () {
                     </svg></button>`,
         responsive: [
             {
-                breakpoint: 769,
+                breakpoint: 768,
                 settings: {
                     arrows: false,
                     centerMode: true,
@@ -53,7 +53,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 576,
                 settings: {
                     arrows: false,
                     centerMode: true,
