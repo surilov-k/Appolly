@@ -6,14 +6,21 @@ Project Description
 
 ### Todo
 
+- [ ] aside category filter  
+- [ ] Favicon  
+- [ ] Page - article  
+- [ ] Animation - onload  
+- [ ] Animation - hover  
 - [ ] extra small scree 320px  
 
 ### In Progress
 
-- [ ] Adaptive bug fix  
+- [ ] Blog adaptive  
 
 ### Done ✓
 
+- [x] Page - blog  
+- [x] Adaptive bug fix  
 - [x] Chuckout slider fix overlay  
 - [x] Checkout slider mobile  
 - [x] Adaptive mobile - base  
