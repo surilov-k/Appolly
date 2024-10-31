@@ -15,10 +15,10 @@ Project Description
 
 ### In Progress
 
-- [ ] Blog adaptive  
 
 ### Done ✓
 
+- [x] Blog adaptive  
 - [x] Page - blog  
 - [x] Adaptive bug fix  
 - [x] Chuckout slider fix overlay  
