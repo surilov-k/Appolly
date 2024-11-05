@@ -6,9 +6,11 @@ Project Description
 
 ### Todo
 
+- [ ] Page post - adaptive  
+- [ ] Page post - tabs  
+- [ ] Page post - bug fix  
 - [ ] aside category filter  
 - [ ] Favicon  
-- [ ] Page - article  
 - [ ] Animation - onload  
 - [ ] Animation - hover  
 - [ ] extra small scree 320px  
@@ -18,6 +20,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Page - article  
 - [x] Blog adaptive  
 - [x] Page - blog  
 - [x] Adaptive bug fix  
