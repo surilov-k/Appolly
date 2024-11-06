@@ -160,3 +160,22 @@ function toggleSubMune(button) {
     button.nextElementSibling.classList.toggle('show');
     button.classList.toggle('rotate');
 }
+
+const tabs = document.querySelectorAll('.comments-tabs_top-btn');
+const all_tabs_content = document.querySelectorAll('.tabs-content_item');
+
+    tabs.forEach((tab, index) =>{
+        tab.addEventListener('click', (e) => {
+            tabs.forEach(tab=>{tab.classList.remove('active')});
+            tab.classList.add('active');
+
+            let tabLine = document.querySelector('.comments-tab-line');
+            tabLine.style.width = e.target.offsetWidth + "px";
+            tabLine.style.left = e.target.offsetLeft + "px";
+
+
+            all_tabs_content.forEach(content => {content.classList.remove('active')});
+            all_tabs_content[index].classList.add('active');
+
+        })
+    })

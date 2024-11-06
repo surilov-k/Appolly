@@ -214,13 +214,11 @@
                         <div class="blog__post-comments--top">
                             <div class="comments-tabs">
                                 <div class="comments-tabs_top">
-                                    <a href="#" class="comments-tabs_top-btn"><span>3</span> Comments</a>
-                                    <a href="#" class="comments-tabs_top-btn">Disqus</a>
-                                    <a href="#" class="comments-tabs_top-btn">
-                                        <span class="comments-tabs_top-btn--gwn">
-                                            <svg class="icon">
-                                                <use href="#sprt-comment-count"></use>
-                                            </svg>1</span> Gwen</a>
+                                    <button class="comments-tabs_top-btn active"><span>3</span> Comments</button>
+                                    <button class="comments-tabs_top-btn">Disqus</button>
+                                    <button class="comments-tabs_top-btn">
+                                        <span class="comments-tabs_top-btn--gwn">1</span> Gwen</button>
+                                    <div class="comments-tab-line"></div>   
                                 </div>
                                 <div class="comments-tabs_bottom">
                                     <a href="#" class="comments-bottom-btn">
@@ -242,64 +240,83 @@
                             </div>
                             <textarea name="" id="" class="post-comment-textarea"></textarea>
                         </div>
-                        <div class="blog__post-comments--comments-tree">
-                            <div class="main-comment">
-                                <div class="main-comment_avatar">
-                                    <img src="./img/post/ruben.jpg" alt="Ruben Vetrovs">
-                                </div>
-                                <div class="main-comment_body">
-                                    <div class="main-comment_body--wrapper">
-                                        <h5 class="main-comment_body--name">Ruben Vetrovs</h5>
-                                        <p class="main-comment_body--text">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit. Ullamcorper accumsan
-                                            malesuada sed feugiat. Rhoncus vel
-                                            ultrices metus ut sed. Sit nunc, in nibh nisi, viverra quis sociis
-                                            malesuada.</p>
-                                        <div class="comment-arrows">
-                                            <a href="#">❮</a>
-                                            <a href="#">❮</a>
+                        <div class="tabs-content_wrap">
+                            <div class="tabs-content_item active">
+                                <div class="blog__post-comments--comments-tree">
+                                    <div class="main-comment">
+                                        <div class="main-comment_avatar">
+                                            <img src="./img/post/ruben.jpg" alt="Ruben Vetrovs">
                                         </div>
-                                    </div>
+                                        <div class="main-comment_body">
+                                            <div class="main-comment_body--wrapper">
+                                                <h5 class="main-comment_body--name">Ruben Vetrovs</h5>
+                                                <p class="main-comment_body--text">Lorem ipsum dolor sit amet,
+                                                    consectetur
+                                                    adipiscing elit. Ullamcorper accumsan
+                                                    malesuada sed feugiat. Rhoncus vel
+                                                    ultrices metus ut sed. Sit nunc, in nibh nisi, viverra quis sociis
+                                                    malesuada.</p>
+                                                <div class="comment-arrows">
+                                                    <a href="#">❮</a>
+                                                    <a href="#">❮</a>
+                                                </div>
+                                            </div>
 
-                                    <div class="answer-comment">
-                                        <div class="answer-comment_avatar">
-                                            <img src="./img/post/wilson.jpg" alt="Wilson Schleifer">
-                                        </div>
-                                        <div class="answer-comment_body">
-                                            <h6 class="answer-comment_body--name">Wilson Schleifer</h6>
-                                            <p class="answer-comment_body--text">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit. Ullamcorper accumsan malesuada sed feugiat. Rhoncus vel
-                                                ultrices metus ut sed. Sit nunc, in nibh nisi, viverra quis sociis
-                                                malesuada.</p>
-                                            <div class="comment-arrows">
-                                                <a href="#">❮</a>
-                                                <a href="#">❮</a>
+                                            <div class="answer-comment">
+                                                <div class="answer-comment_avatar">
+                                                    <img src="./img/post/wilson.jpg" alt="Wilson Schleifer">
+                                                </div>
+                                                <div class="answer-comment_body">
+                                                    <h6 class="answer-comment_body--name">Wilson Schleifer</h6>
+                                                    <p class="answer-comment_body--text">Lorem ipsum dolor sit amet,
+                                                        consectetur
+                                                        adipiscing elit. Ullamcorper accumsan malesuada sed feugiat.
+                                                        Rhoncus
+                                                        vel
+                                                        ultrices metus ut sed. Sit nunc, in nibh nisi, viverra quis
+                                                        sociis
+                                                        malesuada.</p>
+                                                    <div class="comment-arrows">
+                                                        <a href="#">❮</a>
+                                                        <a href="#">❮</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="answer-comment">
+                                                <div class="answer-comment_avatar">
+                                                    <img src="./img/post/desirea.jpg" alt="Desirae Geidt">
+                                                </div>
+                                                <div class="answer-comment_body">
+                                                    <h6 class="answer-comment_body--name">Desirae Geidt</h6>
+                                                    <p class="answer-comment_body--text">Lorem ipsum dolor sit amet,
+                                                        consectetur
+                                                        adipiscing elit. Ullamcorper accumsan malesuada sed feugiat.
+                                                        Rhoncus
+                                                        vel
+                                                        ultrices metus ut sed. Sit nunc, in nibh nisi, viverra quis
+                                                        sociis
+                                                        malesuada.</p>
+                                                    <div class="comment-arrows">
+                                                        <a href="#">❮</a>
+                                                        <a href="#">❮</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="answer-comment">
-                                        <div class="answer-comment_avatar">
-                                            <img src="./img/post/desirea.jpg" alt="Desirae Geidt">
-                                        </div>
-                                        <div class="answer-comment_body">
-                                            <h6 class="answer-comment_body--name">Desirae Geidt</h6>
-                                            <p class="answer-comment_body--text">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit. Ullamcorper accumsan malesuada sed feugiat. Rhoncus vel
-                                                ultrices metus ut sed. Sit nunc, in nibh nisi, viverra quis sociis
-                                                malesuada.</p>
-                                            <div class="comment-arrows">
-                                                <a href="#">❮</a>
-                                                <a href="#">❮</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
+                            </div>
+                            <div class="tabs-content_item">
+                                <h2>Disqus</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quibusdam voluptates ullam, nihil doloremque maiores, recusandae harum asperiores aliquam eum deleniti voluptas quo odit neque?</p>
+                            </div>
+                            <div class="tabs-content_item">
+                                <h2>Gwen</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, minima?</p>
                             </div>
                         </div>
                     </section>
-
                 </div><!--blog__post-->
             </main>
             <aside class="aside">
@@ -388,8 +405,8 @@
                                         <li><a href="#">Second banking app</a></li>
                                     </div>
                                 </ul>
-                                </li>
-                                <li>
+                            </li>
+                            <li>
                                 <button onclick=toggleSubMune(this) class="dropdown-btn">
                                     <svg class="icon">
                                         <use href="#sprt-arrow-right-triangle"></use>
@@ -417,7 +434,7 @@
                                         <li><a href="#">Final cut</a></li>
                                     </div>
                                 </ul>
-                                </li>
+                            </li>
                             </li>
                         </ul>
                     </div>

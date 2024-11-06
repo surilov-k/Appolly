@@ -2717,15 +2717,57 @@ $breakpoint_sm: 576px;
   text-transform: uppercase;
   border-bottom: 1.5px solid #6C6C72;
   margin-bottom: 18px;
+  position: relative;
 }
-.blog__post-comments .comments-tabs_top-btn:first-child {
-  border-bottom: 2px solid #5956E9;
+.blog__post-comments .comments-tabs_top .comments-tab-line {
+  width: 173px;
+  height: 3px;
+  background-color: #5956E9;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .blog__post-comments .comments-tabs_top-btn {
   padding: 8px 0;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  cursor: pointer;
 }
-.blog__post-comments .comments-tabs_top-btn .icon {
-  fill: #5956E9;
+.blog__post-comments .comments-tabs_top-btn:hover {
+  color: #5956E9;
+}
+.blog__post-comments .comments-tabs_top-btn.active {
+  color: #5956E9;
+}
+.blog__post-comments .comments-tabs_top-btn--gwn {
+  background: #5956E9;
+  border-radius: 50%;
+  text-align: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 10px;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  pointer-events: none;
+}
+.blog__post-comments .comments-tabs_top-btn--gwn:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 30px 10px 0 10px;
+  border-color: #5956E9 transparent transparent transparent;
+  -webkit-transform: translateZ(-1px) rotate(45deg);
+          transform: translateZ(-1px) rotate(45deg);
+  bottom: -8px;
+  left: 0;
+  position: absolute;
 }
 .blog__post-comments .comments-tabs_bottom {
   font-size: 1.25rem;
@@ -2843,4 +2885,37 @@ $breakpoint_sm: 576px;
   color: #5956E9;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+.tabs-content_wrap .tabs-content_item {
+  display: none;
+  -webkit-animation: fadeDown 0.5s ease;
+          animation: fadeDown 0.5s ease;
+}
+@-webkit-keyframes fadeDown {
+  from {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeDown {
+  from {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.tabs-content_wrap .tabs-content_item.active {
+  display: block;
 }

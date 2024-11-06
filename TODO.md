@@ -7,7 +7,6 @@ Project Description
 ### Todo
 
 - [ ] Page post - adaptive  
-- [ ] Page post - tabs  
 - [ ] Page post - bug fix  
 - [ ] Favicon  
 - [ ] Animation - onload  
@@ -16,10 +15,11 @@ Project Description
 
 ### In Progress
 
-- [ ] aside category filter  
 
 ### Done ✓
 
+- [x] Page post - tabs  
+- [x] aside category filter  
 - [x] Page - article  
 - [x] Blog adaptive  
 - [x] Page - blog  
