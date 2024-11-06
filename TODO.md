@@ -9,7 +9,6 @@ Project Description
 - [ ] Page post - adaptive  
 - [ ] Page post - tabs  
 - [ ] Page post - bug fix  
-- [ ] aside category filter  
 - [ ] Favicon  
 - [ ] Animation - onload  
 - [ ] Animation - hover  
@@ -17,6 +16,7 @@ Project Description
 
 ### In Progress
 
+- [ ] aside category filter  
 
 ### Done ✓
 

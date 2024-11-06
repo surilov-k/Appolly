@@ -2533,26 +2533,75 @@ h3 {
 
         .aside__category-list {
             li {
-                margin-bottom: 18px;
+                margin-bottom: 10px;
                 font-size: 1.25rem;
                 line-height: 1.5;
                 font-weight: 600;
                 text-transform: uppercase;
-                color: $gray;
-                padding-left: 30px;
                 position: relative;
+                color: $gray;
 
                 &:last-child {
                     margin-bottom: 0;
                 }
 
-                &:before {
-                    content: '▸';
-                    position: absolute;
-                    left: 0px;
-                    top: 0;
-                    color: $dark-blue
+                .dropdown-btn {
+                    color: $gray;
+                    cursor: pointer;
+                    transform: color .3s;
+
+                    &:hover {
+                        color: $royal-blue;
+                    }
+
+                    &:hover>.icon {
+                        fill: $royal-blue;
+                    }
+
+                    &.rotate>.icon {
+                        transform: rotate(90deg);
+                    }
                 }
+
+                .sub-menu {
+                    margin-top: 5px;
+                    display: grid;
+                    grid-template-rows: 0fr;
+                    transition: 0.5s;
+
+                    &>div {
+                        overflow: hidden;
+                    }
+
+                    li {
+                        color: $gray;
+                        font-size: 1rem;
+                        padding-left: 32px;
+                        margin-bottom: 5px;
+                        transform: color .3s;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        &:hover {
+                            color: $royal-blue;
+                        }
+                    }
+                }
+
+                .sub-menu.show {
+                    grid-template-rows: 1fr;
+                }
+            }
+
+            .icon {
+                fill: $dark-blue;
+                width: 24px;
+                height: 24px;
+                transition: fill .3s;
+                margin: 5px 0 -5px;
+                transition: .5s;
             }
         }
 
@@ -2720,9 +2769,11 @@ $breakpoint_sm: 576px;
     &-split {
         display: flex;
         gap: 30px;
+
         &--column {
             flex: 45%;
         }
+
         img {
             margin-bottom: 30px;
             border-radius: 10px;
@@ -2808,6 +2859,7 @@ $breakpoint_sm: 576px;
             }
         }
 
+
         .comments-tabs {
             margin-bottom: 30px;
 
@@ -2847,6 +2899,25 @@ $breakpoint_sm: 576px;
                     width: 20px;
                     height: 20px;
                 }
+
+                &--sort {
+                    position: relative;
+
+                    .sort-select {
+                        padding: 0 25px 0 0;
+                        cursor: pointer;
+                    }
+
+                    .icon {
+                        fill: $gray;
+                        transform: rotate(90deg);
+                        position: absolute;
+                        right: 0;
+                        top: 2px;
+                        pointer-events: none;
+                    }
+                }
+
             }
         }
 

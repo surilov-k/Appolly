@@ -57,14 +57,14 @@
                             <li><a href="#">About</a></li>
                             <li><a href="#">Features</a></li>
                             <li><a href="#">Screenshot</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
                         </ul>
                         <ul class="main-menu">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Features</a></li>
                             <li class="push-right"><a href="#">Screenshot</a></li>
-                            <li><a href="#" class="active">Blog</a></li>
+                            <li><a href="./blog.html" class="active">Blog</a></li>
                         </ul>
                         <a href="#" class="download-btn">Download</a>
                     </nav>
@@ -79,7 +79,7 @@
                                     </svg>
                                 </a></li>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
                             <li><a href="#">Blog details</a></li>
 
                         </ul>
@@ -227,8 +227,17 @@
                                         <svg class="icon">
                                             <use href="#sprt-heart"></use>
                                         </svg>
-                                    Recommend</a>
-                                    <a href="#" class="comments-bottom-btn">Sort by best</a>
+                                        Recommend</a>
+                                    <div class="comments-tabs_bottom--sort">
+                                        <select class="sort-select" name="comments-sort">
+                                            <option value="first">Sort by best</option>
+                                            <option value="second" selected>Sort by name</option>
+                                            <option value="third">Sort by date</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use href="#sprt-arrow-right-triangle"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                             <textarea name="" id="" class="post-comment-textarea"></textarea>
@@ -350,11 +359,66 @@
                     <div class="aside__wrap-row">
                         <h4 class="aside__head">Category</h4>
                         <ul class="aside__category-list">
-                            <li>E-commars app</li>
-                            <li>Banking app</li>
-                            <li>Business app</li>
-                            <li>video app</li>
-                            <li>E-commars app</li>
+                            <li>
+                                <button onclick=toggleSubMune(this) class="dropdown-btn">
+                                    <svg class="icon">
+                                        <use href="#sprt-arrow-right-triangle"></use>
+                                    </svg>
+                                    E-commars app
+                                </button>
+                                <ul class="sub-menu">
+                                    <div>
+                                        <li><a href="#">E-commars app 1</a></li>
+                                        <li><a href="#">Another app 2</a></li>
+                                        <li><a href="#">E-commars app 3</a></li>
+                                    </div>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <button onclick=toggleSubMune(this) class="dropdown-btn">
+                                    <svg class="icon">
+                                        <use href="#sprt-arrow-right-triangle"></use>
+                                    </svg>
+                                    Banking app
+                                </button>
+                                <ul class="sub-menu">
+                                    <div>
+                                        <li><a href="#">First banking app</a></li>
+                                        <li><a href="#">Second banking app</a></li>
+                                    </div>
+                                </ul>
+                                </li>
+                                <li>
+                                <button onclick=toggleSubMune(this) class="dropdown-btn">
+                                    <svg class="icon">
+                                        <use href="#sprt-arrow-right-triangle"></use>
+                                    </svg>
+                                    Business app
+                                </button>
+                                <ul class="sub-menu">
+                                    <div>
+                                        <li><a href="#">First Business app</a></li>
+                                        <li><a href="#">Second Business app</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <button onclick=toggleSubMune(this) class="dropdown-btn">
+                                    <svg class="icon">
+                                        <use href="#sprt-arrow-right-triangle"></use>
+                                    </svg>
+                                    Video app
+                                </button>
+                                <ul class="sub-menu">
+                                    <div>
+                                        <li><a href="#">YouTube</a></li>
+                                        <li><a href="#">TikTok</a></li>
+                                        <li><a href="#">Final cut</a></li>
+                                    </div>
+                                </ul>
+                                </li>
+                            </li>
                         </ul>
                     </div>
 

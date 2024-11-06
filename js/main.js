@@ -155,3 +155,8 @@ mobOverlay.addEventListener('click', function () {
     mobOverlay.classList.toggle('active');
 });
 
+
+function toggleSubMune(button) {
+    button.nextElementSibling.classList.toggle('show');
+    button.classList.toggle('rotate');
+}
