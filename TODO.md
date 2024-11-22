@@ -6,11 +6,8 @@ Project Description
 
 ### Todo
 
-- [ ] Page post - adaptive  
-- [ ] Page post - bug fix  
-- [ ] Favicon  
+- [ ] Crossbrowser Testing  
 - [ ] Animation - onload  
-- [ ] Animation - hover  
 - [ ] extra small scree 320px  
 
 ### In Progress
@@ -18,6 +15,10 @@ Project Description
 
 ### Done ✓
 
+- [x] Page post - bug fix  
+- [x] Page post - adaptive  
+- [x] Animation - hover  
+- [x] Favicon  
 - [x] Page post - tabs  
 - [x] aside category filter  
 - [x] Page - article  
