@@ -386,8 +386,24 @@ h3 {
             height: 45px;
         }
 
+
         &--right img {
             width: 1800px;
+            animation: scaleIn 1s cubic-bezier(0.42, 0, 0.22, 0.99);
+
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0.5);
+                filter: blur(2px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
     }
@@ -783,6 +799,7 @@ h3 {
                 z-index: 2;
             }
 
+
             & .elips {
                 transform: translate(100px, -57px);
                 z-index: 1;
@@ -863,6 +880,10 @@ h3 {
             display: flex;
             flex-direction: column;
 
+            &:hover .team-avatar-wrap::before {
+                animation-play-state: running;
+            }
+
             & .team-avatar-wrap {
                 position: relative;
                 width: 200px;
@@ -881,7 +902,18 @@ h3 {
                     z-index: 2;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%) rotate(0deg);
+                    transition: .3s;
+                    animation: rotateAvatar 10s linear infinite;
+                    animation-play-state: paused;
+                }
+
+                @keyframes rotateAvatar {
+                    0% {}
+
+                    100% {
+                        transform: translate(-50%, -50%) rotate(360deg);
+                    }
                 }
             }
 
@@ -1103,14 +1135,20 @@ h3 {
             border-radius: 10px;
             box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 
+            &:hover .recent__posts-item--img img {
+                transform: scale(1.05);
+            }
+
             &--img {
                 height: 230px;
                 width: 100%;
+                overflow: hidden;
 
                 img {
                     object-fit: cover;
                     width: 100%;
                     height: 100%;
+                    transition: .3s;
                 }
             }
 
@@ -2905,6 +2943,7 @@ $breakpoint_sm: 576px;
             .icon {
                 fill: $dark-blue;
                 transition: .3s;
+
                 &:hover {
                     fill: $royal-blue;
                 }
@@ -3294,4 +3333,96 @@ $breakpoint_sm: 576px;
         width: 80px;
         height: 80px;
     }
+}
+
+
+
+/*animation*/
+section .animate {
+    filter: blur(2px);
+}
+
+section.show-animation .animate {
+    filter: blur(0);
+}
+
+.about__info-advantages--item.animate {
+    transform: translateX(200px);
+    opacity: 0;
+}
+
+.about__info-advantages--item:nth-child(1) {
+    transition: 1s;
+}
+
+.about__info-advantages--item:nth-child(2) {
+    transition: 1.5s;
+}
+
+.about__info-advantages--item:nth-child(3) {
+    transition: 2s;
+}
+
+.show-animation .about__info-advantages--item.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+.stat-item.animate {
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.stat-item:nth-child(1) {
+    transition: 1s;
+}
+
+.stat-item:nth-child(2) {
+    transition: 1.3s;
+}
+
+.stat-item:nth-child(3) {
+    transition: 1.6s;
+}
+
+.show-animation .stat-item.animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.download__info-graphiks .animate {
+    transform: translateX(200px);
+    opacity: 0;
+    transition: .8s;
+}
+
+.show-animation .download__info-graphiks .animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.recent__posts-column.animate {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+.recent__posts-column:nth-child(1) {
+    transition: 1.6s;
+}
+
+.recent__posts-column:nth-child(2) {
+    transition: 1.3s;
+}
+
+.recent__posts-column:nth-child(3) {
+    transition: 1s;
+}
+
+.show-animation .recent__posts-column.animate {
+    transform: translateX(0);
+    opacity: 1;
 }

@@ -164,18 +164,58 @@ function toggleSubMune(button) {
 const tabs = document.querySelectorAll('.comments-tabs_top-btn');
 const all_tabs_content = document.querySelectorAll('.tabs-content_item');
 
-    tabs.forEach((tab, index) =>{
-        tab.addEventListener('click', (e) => {
-            tabs.forEach(tab=>{tab.classList.remove('active')});
-            tab.classList.add('active');
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+        tabs.forEach(tab => { tab.classList.remove('active') });
+        tab.classList.add('active');
 
-            let tabLine = document.querySelector('.comments-tab-line');
-            tabLine.style.width = e.target.offsetWidth + "px";
-            tabLine.style.left = e.target.offsetLeft + "px";
+        let tabLine = document.querySelector('.comments-tab-line');
+        tabLine.style.width = e.target.offsetWidth + "px";
+        tabLine.style.left = e.target.offsetLeft + "px";
 
 
-            all_tabs_content.forEach(content => {content.classList.remove('active')});
-            all_tabs_content[index].classList.add('active');
+        all_tabs_content.forEach(content => { content.classList.remove('active') });
+        all_tabs_content[index].classList.add('active');
 
-        })
     })
+})
+
+
+/*
+let section = document.querySelectorAll('section');
+
+window.onscroll = () => {
+    section.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop;
+        let height = sec.offsetHeight;
+
+        if (top >= offset && top < offset + height) {
+            sec.classList.add('show-animation');
+        }
+        else {
+            sec.classList.remove('show-animation');
+        }
+    })
+}
+    */
+
+
+const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) { // Якщо секція видима
+            entry.target.classList.add('show-animation');
+        } 
+        //else {
+            //entry.target.classList.remove('show-animation');
+        //}
+    });
+}, {
+    root: null, // Вікно браузера як область перегляду
+    threshold: 0.5 // Мінімум 10% секції у вікні для спрацювання
+});
+
+sections.forEach(section => observer.observe(section));
+

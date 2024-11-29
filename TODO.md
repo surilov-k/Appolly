@@ -7,11 +7,11 @@ Project Description
 ### Todo
 
 - [ ] Crossbrowser Testing  
-- [ ] Animation - onload  
 - [ ] extra small scree 320px  
 
 ### In Progress
 
+- [ ] Animation - onload  
 
 ### Done ✓
 
