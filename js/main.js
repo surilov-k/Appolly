@@ -128,7 +128,7 @@ $(document).ready(function () {
 
 });
 
-
+/*
 let ajax = new XMLHttpRequest();
 ajax.open("GET", "../img/icons/sprite.svg", true);
 ajax.send();
@@ -137,6 +137,39 @@ ajax.onload = function () {
     div.innerHTML = ajax.responseText;
     document.body.insertBefore(div,document.body.childNodes[0]);
 };
+*/
+
+let ajax = new XMLHttpRequest();
+ajax.open("GET", "../img/icons/sprite.svg", true);
+
+ajax.onload = function () {
+    // Перевірка статусу відповіді
+    if (ajax.status >= 200 && ajax.status < 300) {
+        let div = document.createElement("div");
+        div.innerHTML = ajax.responseText;
+
+        // Додаємо атрибут для стилізації або зручності (опціонально)
+        div.style.display = "none"; // Ховаємо спрайт із візуального відображення
+        div.setAttribute("id", "svg-sprite");
+
+        // Вставляємо на початок тіла документа
+        document.body.insertBefore(div, document.body.firstChild);
+    } else {
+        console.error("Не вдалося завантажити SVG:", ajax.status, ajax.statusText);
+    }
+};
+
+// Перевірка на помилки запиту
+ajax.onerror = function () {
+    console.error("Помилка при виконанні запиту до", "../img/icons/sprite.svg");
+};
+
+// Відправляємо запит
+ajax.send();
+
+
+
+
 
 let humMenuBtn = document.querySelector('.hum-menu-btn');
 let mobileMenu = document.querySelector('.mobile-menu');
