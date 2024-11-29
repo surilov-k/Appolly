@@ -135,9 +135,7 @@ ajax.send();
 ajax.onload = function () {
     let div = document.createElement("div");
     div.innerHTML = ajax.responseText;
-    document.body.insertBefore(div,
-        document.body.childNodes[0]
-    );
+    document.body.insertBefore(div,document.body.childNodes[0]);
 };
 
 let humMenuBtn = document.querySelector('.hum-menu-btn');
