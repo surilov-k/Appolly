@@ -140,7 +140,7 @@ ajax.onload = function () {
 */
 
 let ajax = new XMLHttpRequest();
-ajax.open("GET", "../img/Icons/sprite.svg", true);
+ajax.open("GET", "img/Icons/sprite.svg", true);
 
 ajax.onload = function () {
     // Перевірка статусу відповіді
