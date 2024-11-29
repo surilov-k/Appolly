@@ -140,8 +140,7 @@ ajax.onload = function () {
 */
 
 let ajax = new XMLHttpRequest();
-ajax.open("GET", "/Appolly/img/icons/sprite.svg", true);
-
+ajax.open("GET", "../img/Icons/sprite.svg", true);
 
 ajax.onload = function () {
     // Перевірка статусу відповіді
@@ -239,9 +238,9 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) { // Якщо секція видима
             entry.target.classList.add('show-animation');
-        } 
+        }
         //else {
-            //entry.target.classList.remove('show-animation');
+        //entry.target.classList.remove('show-animation');
         //}
     });
 }, {
