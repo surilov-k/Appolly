@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+- [ ] Разобраться со слайдером  
 - [ ] Crossbrowser Testing  
 - [ ] extra small scree 320px  
 
