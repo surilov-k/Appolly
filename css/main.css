@@ -3166,107 +3166,91 @@ $breakpoint_sm: 576px;
   }
 }
 /*animation*/
-section .animate {
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
-}
-
-section.show-animation .animate {
-  -webkit-filter: blur(0);
-          filter: blur(0);
-}
-
-.about__info-advantages--item.animate {
-  -webkit-transform: translateX(200px);
-          transform: translateX(200px);
-  opacity: 0;
-}
-
-.about__info-advantages--item:nth-child(1) {
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.about__info-advantages--item:nth-child(2) {
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-}
-
-.about__info-advantages--item:nth-child(3) {
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-.show-animation .about__info-advantages--item.animate {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-}
-
-.stat-item.animate {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-  opacity: 0;
-}
-
-.stat-item:nth-child(1) {
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.stat-item:nth-child(2) {
-  -webkit-transition: 1.3s;
-  transition: 1.3s;
-}
-
-.stat-item:nth-child(3) {
-  -webkit-transition: 1.6s;
-  transition: 1.6s;
-}
-
-.show-animation .stat-item.animate {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-}
-
-.download__info-graphiks .animate {
-  -webkit-transform: translateX(200px);
-          transform: translateX(200px);
-  opacity: 0;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-}
-
-.show-animation .download__info-graphiks .animate {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-}
-
-.recent__posts-column.animate {
-  -webkit-transform: translateX(-200px);
-          transform: translateX(-200px);
-  opacity: 0;
-}
-
-.recent__posts-column:nth-child(1) {
-  -webkit-transition: 1.6s;
-  transition: 1.6s;
-}
-
-.recent__posts-column:nth-child(2) {
-  -webkit-transition: 1.3s;
-  transition: 1.3s;
-}
-
-.recent__posts-column:nth-child(3) {
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.show-animation .recent__posts-column.animate {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
+@media (min-width: 768px) {
+  section .animate {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+  }
+  section.show-animation .animate {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  .about__info-advantages--item.animate {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 0;
+  }
+  .about__info-advantages--item:nth-child(1) {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .about__info-advantages--item:nth-child(2) {
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+  .about__info-advantages--item:nth-child(3) {
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  .show-animation .about__info-advantages--item.animate {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  .stat-item.animate {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 0;
+  }
+  .stat-item:nth-child(1) {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .stat-item:nth-child(2) {
+    -webkit-transition: 1.3s;
+    transition: 1.3s;
+  }
+  .stat-item:nth-child(3) {
+    -webkit-transition: 1.6s;
+    transition: 1.6s;
+  }
+  .show-animation .stat-item.animate {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  .download__info-graphiks .animate {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 0;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+  }
+  .show-animation .download__info-graphiks .animate {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  .recent__posts-column.animate {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+  .recent__posts-column:nth-child(1) {
+    -webkit-transition: 1.6s;
+    transition: 1.6s;
+  }
+  .recent__posts-column:nth-child(2) {
+    -webkit-transition: 1.3s;
+    transition: 1.3s;
+  }
+  .recent__posts-column:nth-child(3) {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .show-animation .recent__posts-column.animate {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
